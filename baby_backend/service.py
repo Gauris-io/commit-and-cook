@@ -237,11 +237,40 @@ def process_recipe_request(data):
     textures,
     allergies
   )
+    try:
+      cleaned_text = baby_recipe.replace("```json", "").replace("```", "").strip()
+      aby_recipe_json = json.loads(cleaned_text)
+    except Exception as e:
+     return {
+        "error": "Gemini did not return valid JSON",
+        "details": str(e),
+        "raw_response": baby_recipe
+     }
+    
+
+    
+    baby_recipe = generate_baby_recipe(
+    formatted_recipe,
+    age,
+    textures,
+    allergies
+)
+    try:
+     cleaned_text = baby_recipe.replace("```json", "").replace("```", "").strip()
+     baby_recipe_json = json.loads(cleaned_text)
+    except Exception:
+     baby_recipe_json = {
+        "error": True,
+        "raw_response": baby_recipe
+    }
+
+    
 
     return {
     "original_recipe": formatted_recipe,
-    "baby_friendly_recipe": baby_recipe
+    "baby_friendly_recipe": baby_recipe_json
    }
+   
 
     
 
