@@ -246,7 +246,7 @@ def process_recipe_request(data):
         "error": True,
         "raw_response": baby_recipe
     }
-    return {
+     return {
     "original_recipe": formatted_recipe,
     "baby_friendly_recipe": baby_recipe_json
    }
