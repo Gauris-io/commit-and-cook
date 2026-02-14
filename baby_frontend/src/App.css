@@ -1,0 +1,126 @@
+/* Keep old font */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* New cozy parchment background */
+  background-color: #f4ece1;
+  background-image: 
+    linear-gradient(30deg, #ece2d0 12%, transparent 12.5%, transparent 87%, #ece2d0 87.5%, #ece2d0),
+    linear-gradient(150deg, #ece2d0 12%, transparent 12.5%, transparent 87%, #ece2d0 87.5%, #ece2d0),
+    linear-gradient(60deg, #efdfc4 25%, transparent 25.5%, transparent 75%, #efdfc4 75%, #efdfc4);
+  background-size: 80px 140px;
+  background-attachment: fixed;
+  color: #5d4037;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Cards (new curved style) */
+.card {
+  background: #fffdfa;
+  border: 2px solid #8b5e3c;
+  border-radius: 30px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+/* Card headings */
+.card h3 {
+  color: #a63a2a;
+  font-size: 1.6rem;
+  border-bottom: 2px dashed #d7ccc8;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+/* Input field */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid #8b5e3c;
+  font-size: 16px;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Option buttons */
+.option-btn {
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 2px solid #8b5e3c;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  background-color: #efebe9;
+}
+
+/* Active button */
+.option-btn.active {
+  background-color: #a63a2a;
+  color: white;
+  border-color: #a63a2a;
+  transform: scale(1.05);
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 40px;
+  border: 2px solid #a63a2a;
+  background-color: #a63a2a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin: 0;
+
+  /* Warm brown gradient text */
+  background: linear-gradient(90deg, #6d4c41, #a63a2a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1.5px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #8d6e63;
+  margin-top: 10px;
+}
+
