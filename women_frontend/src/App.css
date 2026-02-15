@@ -1,0 +1,229 @@
+:root {
+  --bg-color: #f4ecdf;
+  --card-bg: #f8f1e6;
+  --border-brown: #8b5e3c;
+  --primary-orange: #d97757; 
+  --text-main: #5c4033;
+}
+
+body {
+  margin: 0; 
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.retro-page { padding: 20px; }
+
+/* --- Buttons (Consistent Style) --- */
+.order-pill-btn, .want-btn, .option-btn.order, .ck-order-btn, .continue-btn {
+  background-color: var(--primary-orange);
+  color: white;
+  border: 2px solid var(--text-main); /* Dark brown border */
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2); /* 3D Depth effect */
+  transition: transform 0.1s;
+}
+
+.order-pill-btn:active, .want-btn:active, .ck-order-btn:active, .continue-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.continue-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Kitchen Screen Styles --- */
+.cloud-kitchens-page {
+  background-color: #fdf5e6; /* Cream background from image */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.kitchen-screen { max-width: 800px; margin: 0 auto; }
+
+.ck-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border-brown);
+  padding-bottom: 15px;
+}
+
+.ck-header h1 {
+  color: #c4663d; 
+  font-family: serif; 
+  font-size: 2.2rem; 
+  margin: 0; 
+}
+
+.ck-back-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid var(--border-brown);
+  background: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ck-ordering-sub { 
+  text-align: center; 
+  color: var(--border-brown); 
+  margin: 20px 0; 
+  font-size: 1.1rem; 
+}
+
+.ck-ordering-sub .highlight {
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.ck-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ck-card {
+  background: var(--card-bg);
+  border: 2.5px solid var(--border-brown);
+  border-radius: 30px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ck-info h3 { margin: 0 0 5px 0; font-size: 1.3rem; color: var(--text-main); }
+.ck-meta { display: flex; gap: 15px; font-size: 0.9rem; color: #8b5e3c; }
+
+.ck-action { display: flex; align-items: center; gap: 20px; }
+.ck-price { font-size: 1.4rem; font-weight: bold; color: #d97757; }
+
+/* --- Flavor Selection & Grid --- */
+.container { text-align: center; padding-top: 40px; }
+.flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.flavor-pill {
+  background: white;
+  border: 2px solid var(--border-brown);
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.flavor-pill.active { background: var(--primary-orange); color: white; }
+
+/* --- Recipe Results --- */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.recipe-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-brown);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.recipe-image img { 
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+  border-bottom: 2px solid var(--border-brown); 
+}
+
+.recipe-info { padding: 20px; }
+.recipe-name { color: #c4663d; font-size: 1.4rem; margin: 0; }
+.recipe-desc { color: var(--border-brown); margin-bottom: 15px; }
+
+/* --- Choice Modal Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(92, 64, 51, 0.7);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+
+.choice-modal {
+  background: #fdf5e6;
+  padding: 30px;
+  border-radius: 25px;
+  border: 3px solid var(--border-brown);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px solid var(--border-brown);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.option-btn.recipe { 
+  background: white; 
+  color: var(--text-main); 
+}
+
+.close-modal { 
+  margin-top: 10px; 
+  background: none; 
+  border: none; 
+  text-decoration: underline; 
+  cursor: pointer; 
+  color: var(--border-brown);
+}
+
+/* --- Cookbook Page Styles --- */
+.cookbook-container { max-width: 700px; margin: 0 auto; }
+.back-btn { margin-bottom: 15px; cursor: pointer; background: none; border: none; font-weight: bold; color: var(--text-main); }
+
+.cookbook-page {
+  background: white;
+  border: 2px solid var(--border-brown);
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 var(--border-brown);
+}
+
+.recipe-content { margin-top: 20px; line-height: 1.6; }
+.cookbook-footer { margin-top: 40px; font-size: 0.8rem; text-align: center; border-top: 1px solid #eee; padding-top: 10px; color: #aaa; }
